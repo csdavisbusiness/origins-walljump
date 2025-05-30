@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0"
+issueTrackerURL="https://github.com/YourGitHubUsername/L5RWallJump/issues"
+
+[[mods]]
+modId="l5rwalljump"
+version="1.0.0"
+displayName="L5R WallJump"
+description="A mod for L5R Origins, adding wall-cling and jump mechanics for the Dragon Clan."
+authors="csdavisbusiness"
+displayURL="https://github.com/YourGitHubUsername/L5RWallJump"
+
+[[dependencies.l5rwalljump]]
+modId="forge"
+mandatory=true
+versionRange="[47.2.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.l5rwalljump]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.l5rwalljump]]
+modId="origins"
+mandatory=true
+versionRange="[1.10.0.9,)"
+ordering="NONE"
+side="BOTH"

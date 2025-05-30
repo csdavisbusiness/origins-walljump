@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://maven.minecraftforge.net" }
+    }
+    dependencies {
+        classpath "net.minecraftforge.gradle:ForgeGradle:5.1.+"
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+group = 'com.csdavis.l5rwalljump'
+version = '1.0.0'
+base {
+    archivesName = 'l5rwalljump'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                l5rwalljump {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:1.20.1-47.2.0"
+    implementation files("libs/origins-forge-1.20.1-1.10.0.9-all.jar")
+}
